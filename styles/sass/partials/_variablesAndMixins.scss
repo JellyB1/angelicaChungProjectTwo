@@ -1,0 +1,24 @@
+// Colors
+$mainColor: #474BB5;
+$secondaryColor: #03697C;
+$accentColor: #08FDED;
+$mainFontColor: #F3FAFF;
+$secondaryFontColor: #044779;
+
+// Font stacks
+@mixin primaryFontText() {
+	font-family: 'Walter Turncoat', cursive;
+	font-weight: 400px;
+}
+@mixin secondaryFontText() {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400px
+}
+@mixin secondaryFontTextBold() {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+}
+@mixin fontSize($sizeValue){
+	font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
