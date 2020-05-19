@@ -253,14 +253,28 @@ header {
   position: relative;
 }
 
+header h1 {
+  position: absolute;
+  bottom: 50%;
+}
+
 .homeHeader {
   background: url("../assets/homeHeader.jpg") no-repeat center;
   background-size: cover;
 }
 
 .homeHeader h1 {
-  position: absolute;
   bottom: 25%;
+}
+
+.blogHeader {
+  background: url("../assets/blogHeader.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.contactHeader {
+  background: url("../assets/contactHeader.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .headerNav {
