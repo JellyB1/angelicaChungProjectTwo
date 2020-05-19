@@ -1,0 +1,22 @@
+.headerNav {
+	width: 40%;
+	padding-top: 90px;
+
+	ul {
+		display: flex;
+		flex-wrap: row wrap;
+		justify-content: space-between;	
+	}
+
+	a {
+		@include secondaryFontTextBold();
+		@include fontSize(10);
+		letter-spacing: 1px;
+		color: $mainFontColor;
+
+		&:hover,
+		&:focus {
+			border-bottom: 3px solid $accentColor;
+		}
+	}
+}

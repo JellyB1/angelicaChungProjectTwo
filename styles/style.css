@@ -220,3 +220,74 @@ textarea {
   clip: rect(0 0 0);
   overflow: hidden;
 }
+
+body {
+  background-color: #474BB5;
+}
+
+.wrapper {
+  margin: 0% auto;
+  max-width: 1500px;
+  width: 90%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: 'Walter Turncoat', cursive;
+  font-weight: 400px;
+  font-size: 70px;
+  font-size: 7rem;
+  color: #F3FAFF;
+}
+
+header {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+.homeHeader {
+  background: url("../assets/homeHeader.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.homeHeader h1 {
+  position: absolute;
+  bottom: 25%;
+}
+
+.headerNav {
+  width: 40%;
+  padding-top: 90px;
+}
+
+.headerNav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: row wrap;
+      flex-wrap: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.headerNav a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: #F3FAFF;
+}
+
+.headerNav a:hover, .headerNav a:focus {
+  border-bottom: 3px solid #08FDED;
+}
