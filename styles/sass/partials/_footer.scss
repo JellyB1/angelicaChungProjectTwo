@@ -1,0 +1,8 @@
+footer {
+	background-color: $secondaryColor;
+	color: $mainFontColor;
+	text-align: center;
+	@include fontSize(12);
+	@include secondaryFontText();
+	padding: 20px;
+}

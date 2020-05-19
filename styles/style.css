@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -222,7 +223,8 @@ textarea {
 }
 
 body {
-  background-color: #474BB5;
+  background-color: #03697C;
+  font-size: 62.5%;
 }
 
 .wrapper {
@@ -304,4 +306,81 @@ header h1 {
 
 .headerNav a:hover, .headerNav a:focus {
   border-bottom: 3px solid #08FDED;
+}
+
+.blogMainSection {
+  color: #F3FAFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blogMainSection aside {
+  background-color: #474BB5;
+  width: 20%;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.blogMainSection aside .asideImageContainer {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  left: -80px;
+  top: -50px;
+}
+
+.blogMainSection aside .asideImageContainer img {
+  width: 100%;
+  display: inline-block;
+}
+
+.blogMainSection aside h3 {
+  font-family: 'Walter Turncoat', cursive;
+  font-weight: 400px;
+  font-size: 12px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.blogMainSection aside h3:nth-last-child(2) {
+  margin-top: 30px;
+}
+
+.blogMainSection aside p,
+.blogMainSection aside li {
+  font-size: 9px;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+.blogMainSection aside li {
+  padding-left: 5px;
+}
+
+.blogMainSection aside li:before {
+  content: "•";
+  color: #08FDED;
+}
+
+.blogMainSection article {
+  width: 75%;
+}
+
+.blogComments {
+  color: #F3FAFF;
+}
+
+footer {
+  background-color: #044779;
+  color: #F3FAFF;
+  text-align: center;
+  font-size: 12px;
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400px;
+  padding: 20px;
 }
