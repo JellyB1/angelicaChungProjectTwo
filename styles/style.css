@@ -227,26 +227,42 @@ body {
   font-size: 62.5%;
 }
 
-.wrapper {
-  margin: 0% auto;
-  max-width: 1500px;
-  width: 90%;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 h1 {
   font-family: 'Walter Turncoat', cursive;
   font-weight: 400px;
   font-size: 70px;
   font-size: 7rem;
   color: #F3FAFF;
+}
+
+h2 {
+  font-family: 'Walter Turncoat', cursive;
+  font-weight: 400px;
+  font-size: 25px;
+  font-size: 2.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+li,
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400px;
+  font-size: 9px;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+.wrapper {
+  margin: 0% auto;
+  max-width: 1500px;
+  width: 90%;
 }
 
 header {
@@ -316,26 +332,18 @@ header h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: calc(100vh + 10vh);
+}
+
+.blogMainSection img {
+  width: 100%;
 }
 
 .blogMainSection aside {
   background-color: #474BB5;
-  width: 20%;
-  padding: 20px;
+  width: 25%;
+  height: 68%;
   margin-top: 50px;
-}
-
-.blogMainSection aside .asideImageContainer {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  left: -80px;
-  top: -50px;
-}
-
-.blogMainSection aside .asideImageContainer img {
-  width: 100%;
-  display: inline-block;
 }
 
 .blogMainSection aside h3 {
@@ -350,13 +358,6 @@ header h1 {
   margin-top: 30px;
 }
 
-.blogMainSection aside p,
-.blogMainSection aside li {
-  font-size: 9px;
-  font-size: 0.9rem;
-  line-height: 1.2rem;
-}
-
 .blogMainSection aside li {
   padding-left: 5px;
 }
@@ -366,12 +367,67 @@ header h1 {
   color: #08FDED;
 }
 
+.blogMainSection aside .asideImageContainer {
+  position: relative;
+  left: -30px;
+  top: -20px;
+}
+
+.blogMainSection aside .recentPosts {
+  padding: 20px;
+}
+
 .blogMainSection article {
-  width: 75%;
+  width: 70%;
+  position: relative;
+  top: -150px;
+}
+
+.blogMainSection article .blogPictureContainer {
+  background-color: #08FDED;
+}
+
+.blogMainSection article .blogPictureContainer img {
+  position: relative;
+  top: -30px;
+  left: 30px;
+}
+
+.blogMainSection article .blogPost {
+  border-left: 3px solid #08FDED;
+  border-bottom: 3px solid #08FDED;
+  padding: 20px 50px;
+}
+
+.blogMainSection article p {
+  padding-top: 20px;
 }
 
 .blogComments {
   color: #F3FAFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  padding-top: 20px;
+  margin-right: 5%;
+}
+
+.blogComments h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.blogComments h2,
+.blogComments .postedComment {
+  margin-bottom: 30px;
 }
 
 footer {

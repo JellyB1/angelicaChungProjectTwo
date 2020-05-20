@@ -1,3 +1,20 @@
 .blogComments {
 	color: $mainFontColor;
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	
+	padding-top: 20px;
+	margin-right: 5%;
+
+	 
+	h3 {
+		@include secondaryFontTextBold();
+		@include fontSize(10);
+		margin-bottom: 6px;
+	}
+	h2,
+	.postedComment {
+		margin-bottom: 30px;
+	}
 }

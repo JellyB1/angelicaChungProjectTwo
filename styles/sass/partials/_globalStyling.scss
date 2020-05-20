@@ -3,19 +3,34 @@ body {
 	font-size: 62.5%;
 }
 
-.wrapper {
-	margin: 0% auto;
-	max-width: 1500px;
-	width: 90%;
-}
-li {
-	list-style: none;
-}
-a {
-	text-decoration: none;
-}
 h1 {
 	@include primaryFontText();
 	@include fontSize(70);
 	color: $mainFontColor;
+}
+
+h2 {
+	@include primaryFontText();
+	@include fontSize(25);
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+li,
+p {
+	@include secondaryFontText;
+	@include fontSize(9);
+	line-height: 1.2rem;
+}
+
+.wrapper {
+	margin: 0% auto;
+	max-width: 1500px;
+	width: 90%;
 }
