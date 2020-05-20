@@ -14,6 +14,13 @@ h2 {
 	@include fontSize(25);
 }
 
+h3 {}
+
+h4 {
+	@include secondaryFontTextBold();
+	@include fontSize(10);
+}
+
 a {
 	text-decoration: none;
 }
@@ -27,6 +34,10 @@ p {
 	@include secondaryFontText;
 	@include fontSize(9);
 	line-height: 1.2rem;
+}
+
+img {
+	width: 100%;
 }
 
 .wrapper {

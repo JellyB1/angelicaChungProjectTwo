@@ -242,6 +242,13 @@ h2 {
   font-size: 2.5rem;
 }
 
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 10px;
+  font-size: 1rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -257,6 +264,10 @@ p {
   font-size: 9px;
   font-size: 0.9rem;
   line-height: 1.2rem;
+}
+
+img {
+  width: 100%;
 }
 
 .wrapper {
@@ -417,17 +428,34 @@ header h1 {
   margin-right: 5%;
 }
 
-.blogComments h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  font-size: 10px;
-  font-size: 1rem;
+.blogComments section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blogComments h4 {
   margin-bottom: 6px;
 }
 
 .blogComments h2,
 .blogComments .postedComment {
   margin-bottom: 30px;
+}
+
+.blogComments .profilePicture {
+  width: 10%;
+}
+
+.blogComments .postedComment {
+  width: 85%;
 }
 
 footer {

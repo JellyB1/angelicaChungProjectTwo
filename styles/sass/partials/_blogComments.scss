@@ -7,14 +7,27 @@
 	padding-top: 20px;
 	margin-right: 5%;
 
+	section {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 	 
-	h3 {
-		@include secondaryFontTextBold();
-		@include fontSize(10);
+	h4 {
 		margin-bottom: 6px;
 	}
 	h2,
 	.postedComment {
 		margin-bottom: 30px;
+	}
+
+	.profilePicture {
+		width: 10%;
+
+
+	}
+
+	.postedComment {
+		width: 85%;
 	}
 }
