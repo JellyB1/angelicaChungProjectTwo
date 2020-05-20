@@ -7,6 +7,10 @@ h1 {
 	@include primaryFontText();
 	@include fontSize(70);
 	color: $mainFontColor;
+
+	@media (max-width: 600px) {
+		@include fontSize(50);
+	}
 }
 
 h2 {
@@ -23,6 +27,12 @@ h4 {
 
 a {
 	text-decoration: none;
+	color: $mainFontColor;
+
+	&:hover,
+	&:focus {
+		color: $accentColor;
+	}
 }
 
 button {

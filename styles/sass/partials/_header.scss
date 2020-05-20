@@ -4,6 +4,11 @@ header {
 
 	h1 {
 		margin-top: 15%;
+
+		@media (max-width: 600px) {
+			margin-top: 50%;
+			text-align: center;
+		}
 	}
 }
 
@@ -13,6 +18,10 @@ header {
 
 	h1 {
 		margin-top: 30%;
+
+		@media (max-width: 600px) {
+			margin-top: 50%;
+		}
 	}
 }
 

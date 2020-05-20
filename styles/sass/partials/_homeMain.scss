@@ -3,6 +3,36 @@
 	background-color: $secondaryAccentColor;
 }
 
+.firstSection,
+.secondSection,
+.roadTrips,
+.events {
+	color: $mainFontColor;
+	display: flex;
+}
+
+.homeImageContainer {
+	float: right;
+	Width: 50%;
+	// height: 30vh;
+
+	
+
+	img {
+		// position: absolute;
+		// bottom: 100px;
+		position: relative;
+		bottom: 50px;
+
+		right: 5%;
+	}
+}
+.firstSection {
+	
+	height: 50vh;
+
+}
+
 .bannerImg {
 	background: url("../assets/banner.jpg") no-repeat;
 	background-size: cover;
@@ -11,9 +41,6 @@
 }
 
 .events {
-	color: $mainFontColor;
-
-	display: flex;
 	flex-flow: row-wrap;
 	justify-content: space-between;
 
@@ -31,7 +58,6 @@
 
 	.eventText {
 		width: 70%;
-		align-items: center;
 
 		p {
 			margin: 20px auto;
