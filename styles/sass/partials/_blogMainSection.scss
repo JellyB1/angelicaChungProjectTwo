@@ -2,32 +2,18 @@
 	color: $mainFontColor;
 	display: flex;
 	justify-content: space-between;
-	height: calc(100vh + 10vh);
+	height: 120vh;
 
-	img {
-		width: 100%;
-	}
-
-	aside,
-	article {
-		// flex-grow: 1;
-		
+	@media (max-width: 768px) {
+		display: block;
+		height: auto;
 	}
 	
 	aside {
 		background-color: $secondaryAccentColor;
 		flex-basis: 25%;
-				// height: auto;
-				// height: 600px;
-
 		height: 68%;
-
-		
-		margin-top: 50px;
-		
-		@media (max-width: 600px) {
-			display: flex;
-		}
+		margin-top: 50px;		
 		
 		h3 {
 			@include primaryFontText();
@@ -38,6 +24,7 @@
 				margin-top: 30px;
 			}
 		}
+
 		li {
 			padding-left: 5px;
 
@@ -46,26 +33,46 @@
 				color: $accentColor;
 			}
 		}
+
 		.asideImageContainer {
 			position: relative;
 			left: -30px;
 			top: -20px;
-
-					@media (max-width: 768px) {
-						position: static;
-					}
 		}
+
 		.recentPosts {
 			padding: 20px;
+		}
+
+		@media (max-width: 768px) {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: center;
+			align-items: center;
+
+			.asideImageContainer {
+				display: flex;
+				align-items: center;
+				position: static;
+				width: 60%;
+				margin: 50px auto 30px;
+			}
+
+			.recentPosts {
+				width: 100%;
+			}
 		}
 	}
 
 	article {
-		// width: 70%;
-
-				flex-basis: 70%;
+		flex-basis: 70%;
 		position: relative;
 		top: -150px;
+
+		@media (max-width: 768px) {
+			position: static;
+			margin-top: 50px;
+		}
 			
 		.blogPictureContainer {
 			background-color: $accentColor;
@@ -75,9 +82,10 @@
 				top: -30px;
 				left: 30px;
 
-						@media (max-width: 768px) {
-							position: static;
-						}
+				@media (max-width: 768px) {
+					position: static;
+
+				}
 			}
 		}	
 		
@@ -90,10 +98,5 @@
 		p {
 			padding-top: 20px;
 		}
-	}
-
-	@media (max-width: 990px) {}
-	@media (max-width: 600px) {
-		display: inline-block;
 	}
 }

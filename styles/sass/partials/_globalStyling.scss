@@ -7,6 +7,12 @@ h1 {
 	@include primaryFontText();
 	@include fontSize(70);
 	color: $mainFontColor;
+	margin-top: 15%;
+
+		@media (max-width: 600px) {
+			margin-top: 50%;
+			text-align: center;
+		}
 
 	@media (max-width: 600px) {
 		@include fontSize(50);
@@ -53,6 +59,7 @@ button {
 }
 img {
 	width: 100%;
+	display: inline-block;
 }
 
 li {

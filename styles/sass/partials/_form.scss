@@ -1,0 +1,48 @@
+form {
+	width: 100%;
+	margin-bottom: 5%;
+
+	textarea,
+	input {
+		@include secondaryFontText();
+		@include fontSize(8);
+
+		background-color: transparent;
+		color: $mainFontColor;
+		padding: 3%;
+	}
+
+	.personalInfo {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row wrap;
+		margin: auto 5%;
+	}
+
+	input {
+		border: none;
+		border-bottom: 2px solid $mainFontColor;
+		width: 45%;
+		margin-top: 5%;
+		
+		@media (max-width: 600px) {
+			width: 100%;
+			margin-bottom: 5%;
+		}
+	}
+
+	textarea {
+		border: 2px solid $mainFontColor;
+		height: auto;
+		margin: 5% 5% auto;
+		min-width: 300px;
+		resize: none;
+		width: 90%;
+
+	}
+
+	button {
+		margin: 10% 5%;
+		width: 90%;
+	}
+}

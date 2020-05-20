@@ -247,6 +247,14 @@ h1 {
   font-size: 70px;
   font-size: 7rem;
   color: #F3FAFF;
+  margin-top: 15%;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    margin-top: 50%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px) {
@@ -299,6 +307,7 @@ button:hover, button:focus {
 
 img {
   width: 100%;
+  display: inline-block;
 }
 
 li {
@@ -325,30 +334,9 @@ header {
   height: 80vh;
 }
 
-header h1 {
-  margin-top: 15%;
-}
-
-@media (max-width: 600px) {
-  header h1 {
-    margin-top: 50%;
-    text-align: center;
-  }
-}
-
 .homeHeader {
   background: url("../assets/homeHeader.jpg") no-repeat center;
   background-size: cover;
-}
-
-.homeHeader h1 {
-  margin-top: 30%;
-}
-
-@media (max-width: 600px) {
-  .homeHeader h1 {
-    margin-top: 50%;
-  }
 }
 
 .blogHeader {
@@ -488,6 +476,64 @@ header h1 {
   margin: 5% auto;
 }
 
+form {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+form textarea,
+form input {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400px;
+  font-size: 8px;
+  font-size: 0.8rem;
+  background-color: transparent;
+  color: #F3FAFF;
+  padding: 3%;
+}
+
+form .personalInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  margin: auto 5%;
+}
+
+form input {
+  border: none;
+  border-bottom: 2px solid #F3FAFF;
+  width: 45%;
+  margin-top: 5%;
+}
+
+@media (max-width: 600px) {
+  form input {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+}
+
+form textarea {
+  border: 2px solid #F3FAFF;
+  height: auto;
+  margin: 5% 5% auto;
+  min-width: 300px;
+  resize: none;
+  width: 90%;
+}
+
+form button {
+  margin: 10% 5%;
+  width: 90%;
+}
+
 .blogMainSection {
   color: #F3FAFF;
   display: -webkit-box;
@@ -496,11 +542,14 @@ header h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: calc(100vh + 10vh);
+  height: 120vh;
 }
 
-.blogMainSection img {
-  width: 100%;
+@media (max-width: 768px) {
+  .blogMainSection {
+    display: block;
+    height: auto;
+  }
 }
 
 .blogMainSection aside {
@@ -509,14 +558,6 @@ header h1 {
       flex-basis: 25%;
   height: 68%;
   margin-top: 50px;
-}
-
-@media (max-width: 600px) {
-  .blogMainSection aside {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
 }
 
 .blogMainSection aside h3 {
@@ -546,14 +587,40 @@ header h1 {
   top: -20px;
 }
 
-@media (max-width: 768px) {
-  .blogMainSection aside .asideImageContainer {
-    position: static;
-  }
-}
-
 .blogMainSection aside .recentPosts {
   padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .blogMainSection aside {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .blogMainSection aside .asideImageContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: static;
+    width: 60%;
+    margin: 50px auto 30px;
+  }
+  .blogMainSection aside .recentPosts {
+    width: 100%;
+  }
 }
 
 .blogMainSection article {
@@ -561,6 +628,13 @@ header h1 {
       flex-basis: 70%;
   position: relative;
   top: -150px;
+}
+
+@media (max-width: 768px) {
+  .blogMainSection article {
+    position: static;
+    margin-top: 50px;
+  }
 }
 
 .blogMainSection article .blogPictureContainer {
@@ -589,12 +663,6 @@ header h1 {
   padding-top: 20px;
 }
 
-@media (max-width: 600px) {
-  .blogMainSection {
-    display: inline-block;
-  }
-}
-
 .blogComments {
   color: #F3FAFF;
   display: -webkit-box;
@@ -612,16 +680,20 @@ header h1 {
   margin-right: 5%;
 }
 
+@media (max-width: 768px) {
+  .blogComments {
+    width: 90%;
+  }
+}
+
 .blogComments .postedComment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
@@ -720,10 +792,9 @@ header h1 {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  width: 60%;
-  margin-bottom: 5%;
   position: relative;
   bottom: 100px;
+  width: 60%;
 }
 
 @media (max-width: 600px) {
@@ -735,59 +806,6 @@ header h1 {
     width: 100%;
     position: static;
   }
-}
-
-.contactMain form textarea,
-.contactMain form input {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400px;
-  font-size: 8px;
-  font-size: 0.8rem;
-  background-color: transparent;
-  color: #F3FAFF;
-  padding: 3%;
-}
-
-.contactMain form .personalInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  margin: auto 5%;
-}
-
-.contactMain form input {
-  border: none;
-  border-bottom: 2px solid #F3FAFF;
-  width: 45%;
-  margin-top: 5%;
-}
-
-@media (max-width: 600px) {
-  .contactMain form input {
-    width: 100%;
-    margin-bottom: 5%;
-  }
-}
-
-.contactMain form textarea {
-  border: 2px solid #F3FAFF;
-  height: auto;
-  margin: 5% 5% auto;
-  min-width: 300px;
-  resize: none;
-  width: 90%;
-}
-
-.contactMain form button {
-  margin: 10% 5%;
-  width: 90%;
 }
 
 footer {
