@@ -14,7 +14,7 @@ h2 {
 	@include fontSize(25);
 }
 
-h3 {}
+// h3 {}
 
 h4 {
 	@include secondaryFontTextBold();
@@ -23,6 +23,26 @@ h4 {
 
 a {
 	text-decoration: none;
+}
+
+button {
+	border: 1px solid $secondaryColor;
+	color: $secondaryColor;
+	background-color: $accentColor;
+	text-align: center;
+	@include primaryFontText();
+	@include fontSize(13);
+	line-height: 1.8rem;
+	padding: 5px 15px;
+
+	&:hover,
+	&:focus {
+		background-color: $secondaryColor;
+		color: $accentColor;
+	}
+}
+img {
+	width: 100%;
 }
 
 li {
@@ -36,9 +56,7 @@ p {
 	line-height: 1.2rem;
 }
 
-img {
-	width: 100%;
-}
+
 
 .wrapper {
 	margin: 0% auto;

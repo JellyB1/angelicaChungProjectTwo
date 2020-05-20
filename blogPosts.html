@@ -27,7 +27,7 @@
 						</a>
 					</li>
 					<li>
-						<a href="blogPosts.html">
+						<a href="blogPosts.html" class="currentPage">
 							Blog
 						</a>
 					</li>
@@ -112,11 +112,11 @@
 		<h2>
 			Comments:
 		</h2>
-		<section>
+		<section class="postedComment">
 			<div class="profilePicture">
 				<img src="assets/commentOne.jpg" alt="a headshot of a smiling female wearing glasses with long blonde hair with pink highlights">
 			</div>
-			<div class="postedComment">
+			<div class="commentText">
 				<h4>
 					Tuesday October 9th, 2019 by Mariama
 				</h4>
@@ -125,11 +125,11 @@
 				</p>
 			</div>
 		</section>
-		<section>
+		<section class="postedComment">
 			<div class="profilePicture">
 				<img src="assets/commentTwo.jpg" alt="a headshot a smiling male with short dark hair">
 			</div>
-			<div class="postedComment">
+			<div class="commentText">
 				<h4>
 					Wednesday October 10th, 2019 by Rob
 				</h4>
@@ -138,7 +138,14 @@
 				</p>
 			</div>
 		</section>
+		<!-- <section class="addComment"> -->
+			<form action="">
+				<label for="name" class="sr-only">Name</label>
+				<input type="text" required placeholder="Name">
+			</form>		
+		<!-- </section> -->
 	</article>
+	
 	<footer>
 		<p class="copyright">
 			Copyright © 2019 HackerYou

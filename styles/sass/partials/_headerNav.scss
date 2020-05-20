@@ -1,11 +1,14 @@
 .headerNav {
-	width: 40%;
+	width: 100%;
 	padding-top: 90px;
 
 	ul {
 		display: flex;
-		flex-wrap: row wrap;
-		justify-content: space-between;	
+		flex-direction: row;
+	}
+
+	li {
+		flex: 1 0 auto;
 	}
 
 	a {
@@ -16,7 +19,11 @@
 
 		&:hover,
 		&:focus {
-			border-bottom: 3px solid $accentColor;
+			color: $accentColor;
 		}
+	}
+
+	.currentPage {
+		border-bottom: 3px solid $accentColor;
 	}
 }

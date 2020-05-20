@@ -1,0 +1,52 @@
+.secondSection, 
+.gallery {
+	background-color: $secondaryAccentColor;
+}
+
+.bannerImg {
+	background: url("../assets/banner.jpg") no-repeat;
+	background-size: cover;
+	height: 50vh;
+	margin: 20px 0px;
+}
+
+.events {
+	color: $mainFontColor;
+
+	display: flex;
+	flex-flow: row-wrap;
+	justify-content: space-between;
+
+	margin: 5% auto;
+
+	.eventImgContainer {
+		width: 25%;
+		display: flex;
+		align-items: center;
+
+		img {
+			box-shadow: -10px 10px $accentColor;
+		}
+	}
+
+	.eventText {
+		width: 70%;
+		align-items: center;
+
+		p {
+			margin: 20px auto;
+		}
+	}
+}
+
+.gallery .wrapper {
+	display: flex;
+	flex-flow: row-wrap;
+	justify-content: space-between;
+	
+	.galleryImgContainer {
+		width: 30%;
+		margin: 5% auto;
+	}
+}
+
