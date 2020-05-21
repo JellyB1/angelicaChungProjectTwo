@@ -4,7 +4,9 @@
 } 
 
 .firstSection,
-.secondSection,
+// .secondSection,
+.ourPrograms,
+.newLocations,
 .roadTrips,
 .events {
 	color: $mainFontColor;
@@ -58,12 +60,32 @@
 	}
 }
 
+.secondSection  {
+
+	.ourPrograms,
+	.newLocations {
+		width: 100%;
+	}
+
+	.newLocations {
+		flex-direction: row-reverse;
+		margin-top: 5%;
+	}
+
+	.opImageContainer,
+	.nlImageContainer,
+	.opText,
+	.nlText {
+		width: 50%;
+	}
+}
+
 .bannerImg {
 	background: url("../assets/banner.jpg") no-repeat;
 	background-size: cover;
 	height: 50vh;
 	margin: 20px 0px;
-}
+} 
 
 .events {
 	flex-flow: row-wrap;

@@ -1,16 +1,21 @@
+// General body styling
 body {
 	background-color: $mainColor;
 	font-size: 62.5%;
 }
 
+// Headers
 h1 {
 	@include primaryFontText();
 	@include fontSize(70);
+
 	color: $mainFontColor;
+
 	margin-top: 15%;
 
 		@media (max-width: 600px) {
 			margin-top: 50%;
+
 			text-align: center;
 		}
 
@@ -27,13 +32,15 @@ h2 {
 // h3 {}
 
 h4 {
-	@include secondaryFontTextBold();
 	@include fontSize(10);
+	@include secondaryFontTextBold();
 }
 
+// Other text elements
+
 a {
-	text-decoration: none;
 	color: $mainFontColor;
+	text-decoration: none;
 
 	&:hover,
 	&:focus {
@@ -42,14 +49,18 @@ a {
 }
 
 button {
+	@include fontSize(13);
+	@include primaryFontText();
+
+	background-color: $accentColor;
 	border: 1px solid $secondaryColor;
 	color: $secondaryColor;
-	background-color: $accentColor;
-	text-align: center;
-	@include primaryFontText();
-	@include fontSize(13);
+	
 	line-height: 1.8rem;
+	
 	padding: 5px 15px;
+	
+	text-align: center;
 
 	&:hover,
 	&:focus {
@@ -58,8 +69,9 @@ button {
 	}
 }
 img {
-	width: 100%;
 	display: inline-block;
+	
+	width: 100%;
 }
 
 li {
@@ -68,15 +80,38 @@ li {
 
 li,
 p {
-	@include secondaryFontText;
 	@include fontSize(9);
+	@include secondaryFontText;
+	
 	line-height: 1.2rem;
 }
 
-
+// Global class styling
 
 .wrapper {
-	margin: 0% auto;
 	max-width: 1500px;
+	
+	margin: 0% auto;
 	width: 90%;
 }
+
+.blogComments,
+.blogMainSection,
+.contactMain,
+footer {
+	color: $mainFontColor;
+}
+
+footer {
+	background-color: $secondaryColor;
+}
+
+.blogPictureContainer {
+	background-color: $accentColor;
+}
+
+.blogMainSection aside,
+.contactMain form {
+	background-color: $secondaryAccentColor;
+}
+

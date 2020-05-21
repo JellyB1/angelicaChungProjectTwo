@@ -272,15 +272,15 @@ h2 {
 }
 
 h4 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
   font-size: 10px;
   font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
 }
 
 a {
-  text-decoration: none;
   color: #F3FAFF;
+  text-decoration: none;
 }
 
 a:hover, a:focus {
@@ -288,16 +288,16 @@ a:hover, a:focus {
 }
 
 button {
-  border: 1px solid #044779;
-  color: #044779;
-  background-color: #08FDED;
-  text-align: center;
-  font-family: 'Walter Turncoat', cursive;
-  font-weight: 400px;
   font-size: 13px;
   font-size: 1.3rem;
+  font-family: 'Walter Turncoat', cursive;
+  font-weight: 400px;
+  background-color: #08FDED;
+  border: 1px solid #044779;
+  color: #044779;
   line-height: 1.8rem;
   padding: 5px 15px;
+  text-align: center;
 }
 
 button:hover, button:focus {
@@ -306,8 +306,8 @@ button:hover, button:focus {
 }
 
 img {
-  width: 100%;
   display: inline-block;
+  width: 100%;
 }
 
 li {
@@ -316,17 +316,37 @@ li {
 
 li,
 p {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400px;
   font-size: 9px;
   font-size: 0.9rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400px;
   line-height: 1.2rem;
 }
 
 .wrapper {
-  margin: 0% auto;
   max-width: 1500px;
+  margin: 0% auto;
   width: 90%;
+}
+
+.blogComments,
+.blogMainSection,
+.contactMain,
+footer {
+  color: #F3FAFF;
+}
+
+footer {
+  background-color: #044779;
+}
+
+.blogPictureContainer {
+  background-color: #08FDED;
+}
+
+.blogMainSection aside,
+.contactMain form {
+  background-color: #474BB5;
 }
 
 header {
@@ -393,7 +413,8 @@ header {
 }
 
 .firstSection,
-.secondSection,
+.ourPrograms,
+.newLocations,
 .roadTrips,
 .events {
   color: #F3FAFF;
@@ -463,6 +484,26 @@ header {
   padding: auto 5%;
 }
 
+.secondSection .ourPrograms,
+.secondSection .newLocations {
+  width: 100%;
+}
+
+.secondSection .newLocations {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  margin-top: 5%;
+}
+
+.secondSection .opImageContainer,
+.secondSection .nlImageContainer,
+.secondSection .opText,
+.secondSection .nlText {
+  width: 50%;
+}
+
 .bannerImg {
   background: url("../assets/banner.jpg") no-repeat;
   background-size: cover;
@@ -523,8 +564,8 @@ header {
 }
 
 form {
-  width: 100%;
   margin-bottom: 5%;
+  width: 100%;
 }
 
 form textarea,
@@ -581,7 +622,6 @@ form button {
 }
 
 .blogMainSection {
-  color: #F3FAFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -599,7 +639,6 @@ form button {
 }
 
 .blogMainSection aside {
-  background-color: #474BB5;
   -ms-flex-preferred-size: 25%;
       flex-basis: 25%;
   height: 68%;
@@ -607,10 +646,10 @@ form button {
 }
 
 .blogMainSection aside h3 {
-  font-family: 'Walter Turncoat', cursive;
-  font-weight: 400px;
   font-size: 12px;
   font-size: 1.2rem;
+  font-family: 'Walter Turncoat', cursive;
+  font-weight: 400px;
   margin-bottom: 10px;
 }
 
@@ -646,12 +685,12 @@ form button {
     -webkit-box-direction: normal;
         -ms-flex-flow: column wrap;
             flex-flow: column wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .blogMainSection aside .asideImageContainer {
     display: -webkit-box;
@@ -660,9 +699,9 @@ form button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    position: static;
-    width: 60%;
     margin: 50px auto 30px;
+    width: 60%;
+    position: static;
   }
   .blogMainSection aside .recentPosts {
     width: 100%;
@@ -678,19 +717,15 @@ form button {
 
 @media (max-width: 768px) {
   .blogMainSection article {
-    position: static;
     margin-top: 50px;
+    position: static;
   }
-}
-
-.blogMainSection article .blogPictureContainer {
-  background-color: #08FDED;
 }
 
 .blogMainSection article .blogPictureContainer img {
   position: relative;
-  top: -30px;
   left: 30px;
+  top: -30px;
 }
 
 @media (max-width: 768px) {
@@ -700,8 +735,8 @@ form button {
 }
 
 .blogMainSection article .blogPost {
-  border-left: 3px solid #08FDED;
   border-bottom: 3px solid #08FDED;
+  border-left: 3px solid #08FDED;
   padding: 20px 50px;
 }
 
@@ -710,7 +745,6 @@ form button {
 }
 
 .blogComments {
-  color: #F3FAFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -721,9 +755,9 @@ form button {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  width: 60%;
-  padding-top: 20px;
   margin-right: 5%;
+  padding-top: 20px;
+  width: 60%;
 }
 
 @media (max-width: 768px) {
@@ -766,14 +800,13 @@ form button {
 }
 
 .contactMain {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400px;
   font-size: 8px;
   font-size: 0.8rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #F3FAFF;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row-wrap;
@@ -791,16 +824,16 @@ form button {
 
 .contactMain nav,
 .contactMain p {
-  width: 90%;
   margin: auto 5%;
+  width: 90%;
 }
 
 .contactMain aside {
-  margin: 10% auto;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  width: 35%;
+  margin: 10% auto 10% 0;
+  width: 25%;
 }
 
 @media (max-width: 600px) {
@@ -808,8 +841,8 @@ form button {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
-    text-align: center;
     width: 90%;
+    text-align: center;
   }
 }
 
@@ -832,35 +865,32 @@ form button {
 }
 
 .contactMain form {
-  background-color: #474BB5;
-  -webkit-box-shadow: 10px 10px #08FDED;
-          box-shadow: 10px 10px #08FDED;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+  -webkit-box-shadow: 10px 10px #08FDED;
+          box-shadow: 10px 10px #08FDED;
+  width: 60%;
   position: relative;
   bottom: 100px;
-  width: 60%;
 }
 
 @media (max-width: 600px) {
   .contactMain form {
-    margin-top: 10%;
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
             order: 0;
+    margin-top: 10%;
     width: 100%;
     position: static;
   }
 }
 
 footer {
-  background-color: #044779;
-  color: #F3FAFF;
-  text-align: center;
   font-size: 12px;
   font-size: 1.2rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 400px;
   padding: 20px;
+  text-align: center;
 }

@@ -1,6 +1,6 @@
 form {
-	width: 100%;
 	margin-bottom: 5%;
+	width: 100%;
 
 	textarea,
 	input {
@@ -24,7 +24,7 @@ form {
 		border-bottom: 2px solid $mainFontColor;
 		width: 45%;
 		margin-top: 5%;
-		
+
 		@media (max-width: 600px) {
 			width: 100%;
 			margin-bottom: 5%;
@@ -38,7 +38,6 @@ form {
 		min-width: 300px;
 		resize: none;
 		width: 90%;
-
 	}
 
 	button {

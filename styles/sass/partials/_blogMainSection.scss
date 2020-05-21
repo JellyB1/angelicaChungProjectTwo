@@ -1,23 +1,28 @@
 .blogMainSection {
-	color: $mainFontColor;
+	// color: $mainFontColor;
 	display: flex;
 	justify-content: space-between;
+	
 	height: 120vh;
 
 	@media (max-width: 768px) {
 		display: block;
+	
 		height: auto;
 	}
 	
 	aside {
-		background-color: $secondaryAccentColor;
+		// background-color: $secondaryAccentColor;
 		flex-basis: 25%;
+		
 		height: 68%;
+		
 		margin-top: 50px;		
 		
 		h3 {
-			@include primaryFontText();
 			@include fontSize(12);
+			@include primaryFontText();
+			
 			margin-bottom: 10px;
 
 			&:nth-last-child(2) {
@@ -47,15 +52,17 @@
 		@media (max-width: 768px) {
 			display: flex;
 			flex-flow: column wrap;
-			justify-content: center;
 			align-items: center;
+			justify-content: center;
 
 			.asideImageContainer {
 				display: flex;
 				align-items: center;
-				position: static;
-				width: 60%;
+				
 				margin: 50px auto 30px;
+				width: 60%;
+				
+				position: static;
 			}
 
 			.recentPosts {
@@ -66,32 +73,34 @@
 
 	article {
 		flex-basis: 70%;
+		
 		position: relative;
 		top: -150px;
 
 		@media (max-width: 768px) {
-			position: static;
 			margin-top: 50px;
+			
+			position: static;
 		}
 			
 		.blogPictureContainer {
-			background-color: $accentColor;
+			// background-color: $accentColor;
 
 			img {
 				position: relative;
-				top: -30px;
 				left: 30px;
+				top: -30px;
 
 				@media (max-width: 768px) {
 					position: static;
-
 				}
 			}
 		}	
 		
 		.blogPost {
-			border-left: 3px solid $accentColor;
 			border-bottom: 3px solid $accentColor;
+			border-left: 3px solid $accentColor;
+			
 			padding: 20px 50px;
 		}
 

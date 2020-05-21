@@ -1,9 +1,8 @@
 .contactMain {
-	@include secondaryFontText();
 	@include fontSize(8);
+	@include secondaryFontText();
 	
 	display: flex;
-	color: $mainFontColor;
 	flex-flow: row-wrap;
 
 	@media (max-width: 600px) {
@@ -12,19 +11,22 @@
 
 	nav,
 	p {
-		width: 90%;
 		margin: auto 5%;
+		width: 90%;
 	}
 	
 	aside {
-		margin: 10% auto;
 		order: 1;
-		width: 35%;
+		
+		margin: 10% auto 10% 0;
+		width: 25%;
 
 		@media (max-width: 600px) {
 			order: 0;
+			
+			width: 90%;
+
 			text-align: center;
-			width: 90%;	
 		}	
 
 		p:nth-child(2) {
@@ -42,17 +44,23 @@
 	}
 	
 	form {
-		background-color: $secondaryAccentColor;
-		box-shadow: 10px 10px $accentColor;
+		// background-color: $secondaryAccentColor;
+		
 		order: 2;
+		
+		box-shadow: 10px 10px $accentColor;
+		
+		width: 60%;
+		
 		position: relative;
 		bottom: 100px;
-		width: 60%;
 
 		@media (max-width: 600px) {
-			margin-top: 10%;
 			order: 0;
+			
+			margin-top: 10%;
 			width: 100%;
+			
 			position: static;
 		}
 	}	

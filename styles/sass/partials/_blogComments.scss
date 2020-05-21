@@ -1,13 +1,11 @@
 .blogComments {
-	color: $mainFontColor;
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	
-	width: 60%;
-	padding-top: 20px;
 	margin-right: 5%;
+	padding-top: 20px;
+	width: 60%;
 
 	@media (max-width: 768px) {
 		width: 90%;
