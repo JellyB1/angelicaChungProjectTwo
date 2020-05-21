@@ -404,17 +404,63 @@ header {
 
 .homeImageContainer {
   float: right;
-  Width: 50%;
-}
-
-.homeImageContainer img {
+  width: 50%;
   position: relative;
-  bottom: 50px;
+  bottom: 200px;
   right: 5%;
 }
 
+@media (max-width: 600px) {
+  .homeImageContainer {
+    width: 90%;
+  }
+}
+
 .firstSection {
-  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+}
+
+.firstSection .homeArticle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+  margin-bottom: 10%;
+}
+
+.firstSection .icon {
+  color: #474BB5;
+  background-color: #08FDED;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.firstSection .text {
+  width: 80%;
+  padding: auto 5%;
 }
 
 .bannerImg {
