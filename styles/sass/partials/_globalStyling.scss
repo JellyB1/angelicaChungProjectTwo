@@ -4,7 +4,14 @@ body {
 	font-size: 62.5%;
 }
 
-// Headers
+.wrapper {
+	max-width: 1500px;
+
+	margin: 0% auto;
+	width: 90%;
+}
+
+// HX
 h1 {
 	@include primaryFontText();
 	@include fontSize(70);
@@ -13,11 +20,11 @@ h1 {
 
 	margin-top: 15%;
 
-		@media (max-width: 600px) {
-			margin-top: 50%;
+	@media (max-width: 600px) {
+		margin-top: 50%;
 
-			text-align: center;
-		}
+		text-align: center;
+	}
 
 	@media (max-width: 600px) {
 		@include fontSize(50);
@@ -39,7 +46,6 @@ h4 {
 // Other text elements
 
 a {
-	color: $mainFontColor;
 	text-decoration: none;
 
 	&:hover,
@@ -50,16 +56,13 @@ a {
 
 button {
 	@include fontSize(13);
-	@include primaryFontText();
 
-	background-color: $accentColor;
 	border: 1px solid $secondaryColor;
-	color: $secondaryColor;
-	
+
 	line-height: 1.8rem;
-	
+
 	padding: 5px 15px;
-	
+
 	text-align: center;
 
 	&:hover,
@@ -68,9 +71,16 @@ button {
 		color: $accentColor;
 	}
 }
+
 img {
 	display: inline-block;
-	
+}
+
+img,
+.firstSection,
+.secondSection .ourPrograms,
+.secondSection .newLocations,
+.gallery .wrapper {
 	width: 100%;
 }
 
@@ -81,37 +91,70 @@ li {
 li,
 p {
 	@include fontSize(9);
-	@include secondaryFontText;
-	
+
 	line-height: 1.2rem;
 }
 
-// Global class styling
+// Global colors
 
-.wrapper {
-	max-width: 1500px;
-	
-	margin: 0% auto;
-	width: 90%;
-}
-
-.blogComments,
+// Common
+a,
+footer,
+form textarea,
+form input,
+// home page,
+.firstSection,
+.ourPrograms,
+.newLocations,
+.events,
+.roadTrips,
+// Blog,
 .blogMainSection,
-.contactMain,
-footer {
+.blogComments,
+// Contact,
+.contactMain {
 	color: $mainFontColor;
 }
 
+button {
+	color: $secondaryColor;
+}
+
+.firstSection .icon {
+	color: $secondaryAccentColor;
+}
+
+// Global background colors
 footer {
 	background-color: $secondaryColor;
 }
 
+button,
+// Home,
+.firstSection .icon,
+// Blog,
 .blogPictureContainer {
 	background-color: $accentColor;
 }
 
+// Home
+.secondSection,
+.gallery,
+// Blog,
 .blogMainSection aside,
+// Contact,
 .contactMain form {
 	background-color: $secondaryAccentColor;
 }
 
+// Global fonts
+button {
+	@include primaryFontText();
+}
+
+li,
+p,
+form textarea,
+form input {
+	@include secondaryFontText();
+}

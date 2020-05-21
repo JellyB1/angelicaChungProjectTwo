@@ -241,6 +241,12 @@ body {
   font-size: 62.5%;
 }
 
+.wrapper {
+  max-width: 1500px;
+  margin: 0% auto;
+  width: 90%;
+}
+
 h1 {
   font-family: 'Walter Turncoat', cursive;
   font-weight: 400px;
@@ -279,7 +285,6 @@ h4 {
 }
 
 a {
-  color: #F3FAFF;
   text-decoration: none;
 }
 
@@ -290,11 +295,7 @@ a:hover, a:focus {
 button {
   font-size: 13px;
   font-size: 1.3rem;
-  font-family: 'Walter Turncoat', cursive;
-  font-weight: 400px;
-  background-color: #08FDED;
   border: 1px solid #044779;
-  color: #044779;
   line-height: 1.8rem;
   padding: 5px 15px;
   text-align: center;
@@ -307,6 +308,13 @@ button:hover, button:focus {
 
 img {
   display: inline-block;
+}
+
+img,
+.firstSection,
+.secondSection .ourPrograms,
+.secondSection .newLocations,
+.gallery .wrapper {
   width: 100%;
 }
 
@@ -318,35 +326,60 @@ li,
 p {
   font-size: 9px;
   font-size: 0.9rem;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400px;
   line-height: 1.2rem;
 }
 
-.wrapper {
-  max-width: 1500px;
-  margin: 0% auto;
-  width: 90%;
+a,
+footer,
+form textarea,
+form input,
+.firstSection,
+.ourPrograms,
+.newLocations,
+.events,
+.roadTrips,
+.blogMainSection,
+.blogComments,
+.contactMain {
+  color: #F3FAFF;
 }
 
-.blogComments,
-.blogMainSection,
-.contactMain,
-footer {
-  color: #F3FAFF;
+button {
+  color: #044779;
+}
+
+.firstSection .icon {
+  color: #474BB5;
 }
 
 footer {
   background-color: #044779;
 }
 
+button,
+.firstSection .icon,
 .blogPictureContainer {
   background-color: #08FDED;
 }
 
+.secondSection,
+.gallery,
 .blogMainSection aside,
 .contactMain form {
   background-color: #474BB5;
+}
+
+button {
+  font-family: 'Walter Turncoat', cursive;
+  font-weight: 400px;
+}
+
+li,
+p,
+form textarea,
+form input {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400px;
 }
 
 header {
@@ -407,17 +440,13 @@ header {
   border-bottom: 3px solid #08FDED;
 }
 
-.secondSection,
-.gallery {
-  background-color: #474BB5;
-}
-
 .firstSection,
+.firstSection .homeArticle,
 .ourPrograms,
 .newLocations,
 .roadTrips,
-.events {
-  color: #F3FAFF;
+.events,
+.events .eventImgContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,29 +467,20 @@ header {
 }
 
 .firstSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  width: 100%;
 }
 
 .firstSection .homeArticle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 50%;
   margin-bottom: 10%;
+  width: 50%;
 }
 
 .firstSection .icon {
-  color: #474BB5;
-  background-color: #08FDED;
   font-size: 15px;
   font-size: 1.5rem;
   line-height: 2rem;
@@ -484,11 +504,6 @@ header {
   padding: auto 5%;
 }
 
-.secondSection .ourPrograms,
-.secondSection .newLocations {
-  width: 100%;
-}
-
 .secondSection .newLocations {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
@@ -505,7 +520,7 @@ header {
 }
 
 .bannerImg {
-  background: url("../assets/banner.jpg") no-repeat;
+  background: url("../assets/banner.jpg") no-repeat center;
   background-size: cover;
   height: 50vh;
   margin: 20px 0px;
@@ -523,13 +538,10 @@ header {
 }
 
 .events .eventImgContainer {
-  width: 25%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 25%;
 }
 
 .events .eventImgContainer img {
@@ -546,9 +558,6 @@ header {
 }
 
 .gallery .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row-wrap;
@@ -559,8 +568,8 @@ header {
 }
 
 .gallery .wrapper .galleryImgContainer {
-  width: 30%;
   margin: 5% auto;
+  width: 30%;
 }
 
 form {
@@ -570,12 +579,9 @@ form {
 
 form textarea,
 form input {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400px;
   font-size: 8px;
   font-size: 0.8rem;
   background-color: transparent;
-  color: #F3FAFF;
   padding: 3%;
 }
 
@@ -596,24 +602,24 @@ form .personalInfo {
 form input {
   border: none;
   border-bottom: 2px solid #F3FAFF;
-  width: 45%;
   margin-top: 5%;
+  width: 45%;
 }
 
 @media (max-width: 600px) {
   form input {
-    width: 100%;
     margin-bottom: 5%;
+    width: 100%;
   }
 }
 
 form textarea {
   border: 2px solid #F3FAFF;
-  height: auto;
-  margin: 5% 5% auto;
-  min-width: 300px;
   resize: none;
+  margin: 5% 5% auto;
+  height: auto;
   width: 90%;
+  min-width: 300px;
 }
 
 form button {
