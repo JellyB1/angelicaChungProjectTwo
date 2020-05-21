@@ -1,7 +1,6 @@
 .contactMain {
 	@include fontSize(8);
-	@include secondaryFontText();
-	
+
 	display: flex;
 	flex-flow: row-wrap;
 
@@ -10,30 +9,32 @@
 	}
 
 	nav,
-	p {
-		margin: auto 5%;
+	aside section {
+		margin: 8% 5%;
+
 		width: 90%;
 	}
-	
+
 	aside {
 		order: 1;
-		
+
 		margin: 10% auto 10% 0;
+
 		width: 25%;
 
 		@media (max-width: 600px) {
 			order: 0;
-			
+
 			width: 90%;
 
 			text-align: center;
-		}	
+		}
 
 		p:nth-child(2) {
 			margin: 30px auto;
 		}
 	}
-	
+
 	ul {
 		display: flex;
 		justify-content: space-between;
@@ -42,26 +43,25 @@
 			@include fontSize(15);
 		}
 	}
-	
+
 	form {
-		// background-color: $secondaryAccentColor;
-		
 		order: 2;
-		
+
 		box-shadow: 10px 10px $accentColor;
-		
+
 		width: 60%;
-		
+
 		position: relative;
 		bottom: 100px;
 
 		@media (max-width: 600px) {
 			order: 0;
-			
+
 			margin-top: 10%;
+
 			width: 100%;
-			
+
 			position: static;
 		}
-	}	
+	}
 }

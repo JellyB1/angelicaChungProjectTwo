@@ -377,14 +377,15 @@ button {
 li,
 p,
 form textarea,
-form input {
+form input footer,
+.contactMain {
   font-family: 'Roboto', sans-serif;
   font-weight: 400px;
 }
 
 header {
-  width: 100%;
   height: 80vh;
+  width: 100%;
 }
 
 .homeHeader {
@@ -808,8 +809,6 @@ form button {
 .contactMain {
   font-size: 8px;
   font-size: 0.8rem;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -829,8 +828,8 @@ form button {
 }
 
 .contactMain nav,
-.contactMain p {
-  margin: auto 5%;
+.contactMain aside section {
+  margin: 8% 5%;
   width: 90%;
 }
 
@@ -895,8 +894,6 @@ form button {
 footer {
   font-size: 12px;
   font-size: 1.2rem;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400px;
   padding: 20px;
   text-align: center;
 }
