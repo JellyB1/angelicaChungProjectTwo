@@ -454,7 +454,8 @@ header {
 .newLocations,
 .roadTrips,
 .events,
-.events .eventImgContainer {
+.events .eventImgContainer,
+.gallery .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -466,12 +467,6 @@ header {
   position: relative;
   bottom: 200px;
   right: 5%;
-}
-
-@media (max-width: 600px) {
-  .homeImageContainer {
-    width: 90%;
-  }
 }
 
 .firstSection {
@@ -491,33 +486,25 @@ header {
 .firstSection .icon {
   font-size: 15px;
   font-size: 1.5rem;
+  border-radius: 50%;
   line-height: 2rem;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 60px;
   width: 60px;
-  border-radius: 50%;
 }
 
 .firstSection .text {
-  width: 80%;
   padding: auto 5%;
-}
-
-.secondSection .newLocations {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  margin-top: 5%;
+  width: 80%;
 }
 
 .secondSection .opImageContainer,
@@ -525,6 +512,50 @@ header {
 .secondSection .opText,
 .secondSection .nlText {
   width: 50%;
+}
+
+.secondSection .opImageContainer,
+.secondSection .nlImageContainer {
+  position: relative;
+}
+
+.secondSection .newLocations {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.secondSection .opImageContainer {
+  -webkit-box-shadow: 20px 20px #08FDED;
+          box-shadow: 20px 20px #08FDED;
+  bottom: 30px;
+  right: 30px;
+}
+
+.secondSection .nlImageContainer {
+  -webkit-box-shadow: -20px 20px #08FDED;
+          box-shadow: -20px 20px #08FDED;
+  top: 30px;
+  left: 30px;
+}
+
+.secondSection .opText,
+.secondSection .nlText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 5%;
 }
 
 .bannerImg {
@@ -568,16 +599,55 @@ header {
 .gallery .wrapper {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row-wrap;
-          flex-flow: row-wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .gallery .wrapper .galleryImgContainer {
-  margin: 5% auto;
+  margin: auto;
+  padding: 3%;
+  min-width: 300px;
   width: 30%;
+}
+
+@media (max-width: 768px) {
+  .firstSection .homeArticle {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .homeImageContainer {
+    position: static;
+    margin: 10% 5%;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .firstSection .homeArticle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .firstSection .icon {
+    margin: auto;
+  }
+  .firstSection .text {
+    text-align: center;
+    margin-top: 5%;
+    width: 100%;
+  }
+  .firstSection .text h2 {
+    margin: 5% auto;
+  }
 }
 
 form {
