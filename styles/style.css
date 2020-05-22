@@ -252,7 +252,6 @@ h1 {
   font-weight: 400px;
   font-size: 70px;
   font-size: 7rem;
-  color: #F3FAFF;
   margin-top: 15%;
 }
 
@@ -277,11 +276,18 @@ h2 {
   font-size: 2.5rem;
 }
 
+h3 {
+  font-family: 'Walter Turncoat', cursive;
+  font-weight: 400px;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
 h4 {
-  font-size: 10px;
-  font-size: 1rem;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
+  font-size: 10px;
+  font-size: 1rem;
 }
 
 a {
@@ -329,6 +335,7 @@ p {
   line-height: 1.2rem;
 }
 
+h1,
 a,
 footer,
 form textarea,
@@ -590,13 +597,13 @@ form .personalInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: auto 5%;
 }
 
@@ -653,10 +660,6 @@ form button {
 }
 
 .blogMainSection aside h3 {
-  font-size: 12px;
-  font-size: 1.2rem;
-  font-family: 'Walter Turncoat', cursive;
-  font-weight: 400px;
   margin-bottom: 10px;
 }
 
@@ -742,8 +745,8 @@ form button {
 }
 
 .blogMainSection article .blogPost {
-  border-bottom: 3px solid #08FDED;
   border-left: 3px solid #08FDED;
+  border-bottom: 3px solid #08FDED;
   padding: 20px 50px;
 }
 

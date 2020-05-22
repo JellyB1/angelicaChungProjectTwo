@@ -8,6 +8,7 @@ body {
 	max-width: 1500px;
 
 	margin: 0% auto;
+
 	width: 90%;
 }
 
@@ -15,8 +16,6 @@ body {
 h1 {
 	@include primaryFontText();
 	@include fontSize(70);
-
-	color: $mainFontColor;
 
 	margin-top: 15%;
 
@@ -36,11 +35,14 @@ h2 {
 	@include fontSize(25);
 }
 
-// h3 {}
+h3 {
+	@include primaryFontText();
+	@include fontSize(12);
+}
 
 h4 {
-	@include fontSize(10);
 	@include secondaryFontTextBold();
+	@include fontSize(10);
 }
 
 // Other text elements
@@ -98,6 +100,7 @@ p {
 // Global colors
 
 // Common
+h1,
 a,
 footer,
 form textarea,
