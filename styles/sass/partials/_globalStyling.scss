@@ -46,7 +46,9 @@ h4 {
 
 // Other text elements
 
-a {
+a,
+// label[for="hamburgMenu"],
+.hamburgMenu {
 	text-decoration: none;
 	transition: color 200ms ease-in-out;
 
@@ -107,6 +109,9 @@ a,
 footer,
 form textarea,
 form input,
+// Found in Header Nav section;
+// label[for="hamburgMenu"],
+.hamburgMenu,
 // Found in Home section;
 .firstSection,
 .ourPrograms,
@@ -161,6 +166,8 @@ li,
 p,
 form textarea,
 form input footer,
+// label[for="hamburgMenu"],
+.hamburgMenu,
 // Found in Contact section;
 .contactMain {
 	@include secondaryFontText();

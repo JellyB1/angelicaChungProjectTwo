@@ -290,13 +290,16 @@ h4 {
   font-size: 1rem;
 }
 
-a {
+a,
+.hamburgMenu {
   text-decoration: none;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
 }
 
-a:hover, a:focus {
+a:hover, a:focus,
+.hamburgMenu:hover,
+.hamburgMenu:focus {
   color: #08FDED;
 }
 
@@ -344,6 +347,7 @@ a,
 footer,
 form textarea,
 form input,
+.hamburgMenu,
 .firstSection,
 .ourPrograms,
 .newLocations,
@@ -389,6 +393,7 @@ li,
 p,
 form textarea,
 form input footer,
+.hamburgMenu,
 .contactMain {
   font-family: 'Roboto', sans-serif;
   font-weight: 400px;
@@ -415,8 +420,25 @@ header {
 }
 
 .headerNav {
-  width: 100%;
   padding-top: 90px;
+  width: 100%;
+}
+
+.headerNav .hamburgMenu {
+  font-size: 12px;
+  font-size: 1.2rem;
+  display: none;
+  position: fixed;
+  z-index: 10;
+  background-color: #044779;
+  padding: 3%;
+  border-radius: 50px;
+}
+
+.headerNav input[type="checkbox"] {
+  display: none;
+  position: relative;
+  top: -1000px;
 }
 
 .headerNav ul {
@@ -435,21 +457,54 @@ header {
           flex: 1 0 auto;
 }
 
-.headerNav a {
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  font-size: 10px;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  color: #F3FAFF;
-}
-
-.headerNav a:hover, .headerNav a:focus {
-  color: #08FDED;
-}
-
 .headerNav .currentPage {
   border-bottom: 3px solid #08FDED;
+}
+
+@media (max-width: 600px) {
+  .headerNav {
+    padding-top: 30px;
+  }
+  .headerNav .hamburgMenu,
+  .headerNav input[type="checkbox"] {
+    display: block;
+  }
+  .headerNav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    z-index: 10;
+    right: -30%;
+    top: 0;
+    padding-top: calc(30px + 3% - 5%);
+    height: 100%;
+    width: 30%;
+    background-color: #044779;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .headerNav ul li {
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+    border-bottom: 5px groove #474BB5;
+    margin-bottom: calc(100% / 2);
+    width: 80%;
+  }
+  .headerNav ul a {
+    font-size: 15px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    display: inline-block;
+    padding: 10% 5%;
+    text-align: center;
+    width: 100%;
+  }
+  .headerNav input[type="checkbox"]:checked + ul {
+    right: 0;
+  }
 }
 
 .firstSection,

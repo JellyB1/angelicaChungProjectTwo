@@ -1,6 +1,28 @@
 .headerNav {
-	width: 100%;
 	padding-top: 90px;
+
+	width: 100%;
+
+	.hamburgMenu {
+		@include fontSize(12);
+
+		display: none;
+
+		position: fixed;
+		z-index: 10;
+
+		background-color: $secondaryColor;
+
+		padding: 3%;
+		border-radius: 50px;
+	}
+
+	input[type="checkbox"] {
+		display: none;
+
+		position: relative;
+		top: -1000px;
+	}
 
 	ul {
 		display: flex;
@@ -11,19 +33,62 @@
 		flex: 1 0 auto;
 	}
 
-	a {
-		@include secondaryFontTextBold();
-		@include fontSize(10);
-		letter-spacing: 1px;
-		color: $mainFontColor;
-
-		&:hover,
-		&:focus {
-			color: $accentColor;
-		}
-	}
-
 	.currentPage {
 		border-bottom: 3px solid $accentColor;
+	}
+}
+
+@media (max-width: 600px) {
+	.headerNav {
+		padding-top: 30px;
+
+		.hamburgMenu,
+		input[type="checkbox"] {
+			display: block;
+		}
+
+		ul {
+			flex-direction: column;
+
+			position: fixed;
+			z-index: 10;
+			right: -30%;
+			// right: 0;
+			top: 0;
+
+			padding-top: calc(30px + 3% - 5%);
+			height: 100%;
+			width: 30%;
+
+			background-color: $secondaryColor;
+
+			transition: all 0.5s;
+
+			li {
+				flex: none;
+
+				border-bottom: 5px groove $secondaryAccentColor;
+
+				margin-bottom: calc(100% / 2);
+
+				width: 80%;
+			}
+
+			a {
+				@include fontSize(15);
+				line-height: 2rem;
+
+				display: inline-block;
+
+				padding: 10% 5%;
+				text-align: center;
+
+				width: 100%;
+			}
+		}
+
+		input[type="checkbox"]:checked + ul {
+			right: 0;
+		}
 	}
 }
