@@ -4,7 +4,7 @@
 .newLocations,
 .roadTrips,
 .events,
-.events .eventImgContainer,
+.events .eventImageContainer,
 .gallery .wrapper {
 	display: flex;
 }
@@ -50,49 +50,97 @@
 		padding: auto 5%;
 
 		width: 80%;
+
+		h2 {
+			margin-bottom: 3%;
+		}
 	}
 }
 
 .secondSection {
+	.ourPrograms,
+	.newLocations {
+		justify-content: space-between;
+	}
+
 	.opImageContainer,
 	.nlImageContainer,
 	.opText,
 	.nlText {
-		width: 50%;
+		width: 45%;
 	}
 
-	.opImageContainer,
-	.nlImageContainer {
-		position: relative;
+	.ourPrograms {
+		margin-bottom: 5%;
 	}
 
 	.newLocations {
 		flex-direction: row-reverse;
+
+		margin-bottom: 7%;
 	}
 
 	.opImageContainer {
-		box-shadow: 20px 20px $accentColor;
+		img {
+			position: relative;
+			bottom: 20px;
+			right: 20px;
 
-		bottom: 30px;
-		right: 30px;
+			box-shadow: 20px 20px $accentColor;
+		}
 	}
 
 	.nlImageContainer {
-		box-shadow: -20px 20px $accentColor;
+		img {
+			position: relative;
+			bottom: 20px;
+			left: 20px;
 
-		top: 30px;
-		left: 30px;
+			box-shadow: -20px 20px $accentColor;
+		}
 	}
 
 	.opText,
 	.nlText {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
 		justify-content: center;
+	}
 
-		// margin: auto 5%;
-		padding: 0 5%;
+	.opText {
+		align-items: flex-start;
+	}
+
+	.nlText {
+		align-items: flex-end;
+
+		p {
+			text-align: end;
+		}
+	}
+
+	h3 {
+		margin: 3% 0;
+	}
+
+	button {
+		// margin-top: 5%;
+		margin: 5% auto;
+	}
+}
+
+.roadTrips {
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+
+	margin: 10% auto 5%;
+
+	text-align: center;
+
+	p {
+		margin: 3% auto;
+		padding-bottom: 20px;
 	}
 }
 
@@ -111,7 +159,7 @@
 
 	margin: 5% auto;
 
-	.eventImgContainer {
+	.eventImageContainer {
 		align-items: center;
 
 		width: 25%;
@@ -134,7 +182,7 @@
 	flex-flow: row wrap;
 	justify-content: space-between;
 
-	.galleryImgContainer {
+	.galleryImageContainer {
 		margin: auto;
 		padding: 3%;
 
@@ -149,6 +197,43 @@
 			width: 100%;
 		}
 	}
+
+	.secondSection {
+		.ourPrograms,
+		.newLocations {
+			flex-direction: column;
+
+			.opImageContainer,
+			.nlImageContainer,
+			.opText,
+			.nlText {
+				width: 100%;
+			}
+			.opImageContainer,
+			.nlImageContainer,
+			.opText,
+			.nlText {
+				align-items: center;
+
+				text-align: center;
+
+				margin: 5% auto;
+			}
+
+			.opImageContainer,
+			.nlImageContainer {
+				position: static;
+
+				max-width: 550px;
+
+				img {
+					position: static;
+
+					box-shadow: none;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 600px) {
@@ -158,6 +243,30 @@
 		margin: 10% 5%;
 
 		width: 90%;
+	}
+
+	.events {
+		flex-direction: column;
+
+		.opImageContainer,
+		.nlImageContainer {
+			img {
+				box-shadow: none;
+			}
+		}
+
+		.eventText {
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			justify-content: center;
+
+			margin-top: 5%;
+
+			p {
+				text-align: center;
+			}
+		}
 	}
 }
 

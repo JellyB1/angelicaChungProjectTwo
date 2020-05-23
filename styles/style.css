@@ -242,9 +242,9 @@ body {
 }
 
 .wrapper {
-  max-width: 1500px;
   margin: 0% auto;
   width: 90%;
+  max-width: 1500px;
 }
 
 h1 {
@@ -292,6 +292,8 @@ h4 {
 
 a {
   text-decoration: none;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
 }
 
 a:hover, a:focus {
@@ -305,6 +307,8 @@ button {
   line-height: 1.8rem;
   padding: 5px 15px;
   text-align: center;
+  -webkit-transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
 
 button:hover, button:focus {
@@ -454,7 +458,7 @@ header {
 .newLocations,
 .roadTrips,
 .events,
-.events .eventImgContainer,
+.events .eventImageContainer,
 .gallery .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -507,16 +511,26 @@ header {
   width: 80%;
 }
 
+.firstSection .text h2 {
+  margin-bottom: 3%;
+}
+
+.secondSection .ourPrograms,
+.secondSection .newLocations {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .secondSection .opImageContainer,
 .secondSection .nlImageContainer,
 .secondSection .opText,
 .secondSection .nlText {
-  width: 50%;
+  width: 45%;
 }
 
-.secondSection .opImageContainer,
-.secondSection .nlImageContainer {
-  position: relative;
+.secondSection .ourPrograms {
+  margin-bottom: 5%;
 }
 
 .secondSection .newLocations {
@@ -524,20 +538,23 @@ header {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  margin-bottom: 7%;
 }
 
-.secondSection .opImageContainer {
+.secondSection .opImageContainer img {
+  position: relative;
+  bottom: 20px;
+  right: 20px;
   -webkit-box-shadow: 20px 20px #08FDED;
           box-shadow: 20px 20px #08FDED;
-  bottom: 30px;
-  right: 30px;
 }
 
-.secondSection .nlImageContainer {
+.secondSection .nlImageContainer img {
+  position: relative;
+  bottom: 20px;
+  left: 20px;
   -webkit-box-shadow: -20px 20px #08FDED;
           box-shadow: -20px 20px #08FDED;
-  top: 30px;
-  left: 30px;
 }
 
 .secondSection .opText,
@@ -549,13 +566,53 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.secondSection .opText {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.secondSection .nlText {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.secondSection .nlText p {
+  text-align: end;
+}
+
+.secondSection h3 {
+  margin: 3% 0;
+}
+
+.secondSection button {
+  margin: 5% auto;
+}
+
+.roadTrips {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 5%;
+  margin: 10% auto 5%;
+  text-align: center;
+}
+
+.roadTrips p {
+  margin: 3% auto;
+  padding-bottom: 20px;
 }
 
 .bannerImg {
@@ -576,14 +633,14 @@ header {
   margin: 5% auto;
 }
 
-.events .eventImgContainer {
+.events .eventImageContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 25%;
 }
 
-.events .eventImgContainer img {
+.events .eventImageContainer img {
   -webkit-box-shadow: -10px 10px #08FDED;
           box-shadow: -10px 10px #08FDED;
 }
@@ -606,7 +663,7 @@ header {
           justify-content: space-between;
 }
 
-.gallery .wrapper .galleryImgContainer {
+.gallery .wrapper .galleryImageContainer {
   margin: auto;
   padding: 3%;
   min-width: 300px;
@@ -617,6 +674,52 @@ header {
   .firstSection .homeArticle {
     width: 100%;
   }
+  .secondSection .ourPrograms,
+  .secondSection .newLocations {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .secondSection .ourPrograms .opImageContainer,
+  .secondSection .ourPrograms .nlImageContainer,
+  .secondSection .ourPrograms .opText,
+  .secondSection .ourPrograms .nlText,
+  .secondSection .newLocations .opImageContainer,
+  .secondSection .newLocations .nlImageContainer,
+  .secondSection .newLocations .opText,
+  .secondSection .newLocations .nlText {
+    width: 100%;
+  }
+  .secondSection .ourPrograms .opImageContainer,
+  .secondSection .ourPrograms .nlImageContainer,
+  .secondSection .ourPrograms .opText,
+  .secondSection .ourPrograms .nlText,
+  .secondSection .newLocations .opImageContainer,
+  .secondSection .newLocations .nlImageContainer,
+  .secondSection .newLocations .opText,
+  .secondSection .newLocations .nlText {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin: 5% auto;
+  }
+  .secondSection .ourPrograms .opImageContainer,
+  .secondSection .ourPrograms .nlImageContainer,
+  .secondSection .newLocations .opImageContainer,
+  .secondSection .newLocations .nlImageContainer {
+    position: static;
+    max-width: 550px;
+  }
+  .secondSection .ourPrograms .opImageContainer img,
+  .secondSection .ourPrograms .nlImageContainer img,
+  .secondSection .newLocations .opImageContainer img,
+  .secondSection .newLocations .nlImageContainer img {
+    position: static;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 @media (max-width: 600px) {
@@ -624,6 +727,36 @@ header {
     position: static;
     margin: 10% 5%;
     width: 90%;
+  }
+  .events {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .events .opImageContainer img,
+  .events .nlImageContainer img {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .events .eventText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 5%;
+  }
+  .events .eventText p {
+    text-align: center;
   }
 }
 
@@ -901,7 +1034,7 @@ form button {
 }
 
 .contactMain nav,
-.contactMain aside section {
+.contactMain address {
   margin: 8% 5%;
   width: 90%;
 }
