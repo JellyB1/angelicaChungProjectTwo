@@ -4,10 +4,6 @@
 	display: flex;
 	flex-flow: row-wrap;
 
-	@media (max-width: 600px) {
-		flex-flow: column nowrap;
-	}
-
 	nav,
 	address {
 		margin: 8% 5%;
@@ -21,14 +17,6 @@
 		margin: 10% auto 10% 0;
 
 		width: 25%;
-
-		@media (max-width: 600px) {
-			order: 0;
-
-			width: 90%;
-
-			text-align: center;
-		}
 
 		p:nth-child(2) {
 			margin: 30px auto;
@@ -53,8 +41,22 @@
 
 		position: relative;
 		bottom: 100px;
+	}
+}
 
-		@media (max-width: 600px) {
+@media (max-width: 600px) {
+	.contactMain {
+		flex-flow: column nowrap;
+
+		aside {
+			order: 0;
+
+			width: 90%;
+
+			text-align: center;
+		}
+
+		form {
 			order: 0;
 
 			margin-top: 10%;

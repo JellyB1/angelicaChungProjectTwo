@@ -27,12 +27,6 @@ form {
 		margin-top: 5%;
 
 		width: 45%;
-
-		@media (max-width: 600px) {
-			margin-bottom: 5%;
-
-			width: 100%;
-		}
 	}
 
 	textarea {
@@ -50,5 +44,15 @@ form {
 		margin: 10% 5%;
 
 		width: 90%;
+	}
+}
+
+@media (max-width: 600px) {
+	form {
+		input {
+			margin-bottom: 5%;
+
+			width: 100%;
+		}
 	}
 }

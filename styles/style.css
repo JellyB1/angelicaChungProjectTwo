@@ -292,6 +292,7 @@ h4 {
 
 a,
 .hamburgMenu {
+  padding: 20px;
   text-decoration: none;
   -webkit-transition: color 200ms ease-in-out;
   transition: color 200ms ease-in-out;
@@ -775,6 +776,28 @@ header {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+  .events {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .events .eventImageContainer,
+  .events .eventText {
+    width: 100%;
+  }
+  .events .eventImageContainer {
+    margin: auto;
+    max-width: 550px;
+  }
+  .events .eventImageContainer img {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .events .eventText {
+    margin-top: 5%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px) {
@@ -872,13 +895,6 @@ form input {
   width: 45%;
 }
 
-@media (max-width: 600px) {
-  form input {
-    margin-bottom: 5%;
-    width: 100%;
-  }
-}
-
 form textarea {
   border: 2px solid #F3FAFF;
   resize: none;
@@ -893,6 +909,13 @@ form button {
   width: 90%;
 }
 
+@media (max-width: 600px) {
+  form input {
+    margin-bottom: 5%;
+    width: 100%;
+  }
+}
+
 .blogMainSection {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -901,13 +924,6 @@ form button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 120vh;
-}
-
-@media (max-width: 768px) {
-  .blogMainSection {
-    display: block;
-    height: auto;
-  }
 }
 
 .blogMainSection aside {
@@ -944,7 +960,34 @@ form button {
   padding: 20px;
 }
 
+.blogMainSection article {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  position: relative;
+  top: -150px;
+}
+
+.blogMainSection article .blogPictureContainer img {
+  position: relative;
+  left: 30px;
+  top: -30px;
+}
+
+.blogMainSection article .blogPost {
+  border-left: 3px solid #08FDED;
+  border-bottom: 3px solid #08FDED;
+  padding: 20px 50px;
+}
+
+.blogMainSection article p {
+  padding-top: 20px;
+}
+
 @media (max-width: 768px) {
+  .blogMainSection {
+    display: block;
+    height: auto;
+  }
   .blogMainSection aside {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -959,6 +1002,8 @@ form button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 5% auto auto;
+    width: 80%;
   }
   .blogMainSection aside .asideImageContainer {
     display: -webkit-box;
@@ -974,42 +1019,13 @@ form button {
   .blogMainSection aside .recentPosts {
     width: 100%;
   }
-}
-
-.blogMainSection article {
-  -ms-flex-preferred-size: 70%;
-      flex-basis: 70%;
-  position: relative;
-  top: -150px;
-}
-
-@media (max-width: 768px) {
   .blogMainSection article {
     margin-top: 50px;
     position: static;
   }
-}
-
-.blogMainSection article .blogPictureContainer img {
-  position: relative;
-  left: 30px;
-  top: -30px;
-}
-
-@media (max-width: 768px) {
   .blogMainSection article .blogPictureContainer img {
     position: static;
   }
-}
-
-.blogMainSection article .blogPost {
-  border-left: 3px solid #08FDED;
-  border-bottom: 3px solid #08FDED;
-  padding: 20px 50px;
-}
-
-.blogMainSection article p {
-  padding-top: 20px;
 }
 
 .blogComments {
@@ -1026,12 +1042,6 @@ form button {
   margin-right: 5%;
   padding-top: 20px;
   width: 60%;
-}
-
-@media (max-width: 768px) {
-  .blogComments {
-    width: 90%;
-  }
 }
 
 .blogComments .postedComment {
@@ -1067,6 +1077,12 @@ form button {
   width: 85%;
 }
 
+@media (max-width: 768px) {
+  .blogComments {
+    width: 90%;
+  }
+}
+
 .contactMain {
   font-size: 8px;
   font-size: 0.8rem;
@@ -1077,15 +1093,6 @@ form button {
   -webkit-box-direction: normal;
       -ms-flex-flow: row-wrap;
           flex-flow: row-wrap;
-}
-
-@media (max-width: 600px) {
-  .contactMain {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-  }
 }
 
 .contactMain nav,
@@ -1100,16 +1107,6 @@ form button {
           order: 1;
   margin: 10% auto 10% 0;
   width: 25%;
-}
-
-@media (max-width: 600px) {
-  .contactMain aside {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-    width: 90%;
-    text-align: center;
-  }
 }
 
 .contactMain aside p:nth-child(2) {
@@ -1142,6 +1139,19 @@ form button {
 }
 
 @media (max-width: 600px) {
+  .contactMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .contactMain aside {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 90%;
+    text-align: center;
+  }
   .contactMain form {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;

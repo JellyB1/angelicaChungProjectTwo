@@ -8,10 +8,6 @@
 
 	width: 60%;
 
-	@media (max-width: 768px) {
-		width: 90%;
-	}
-
 	.postedComment {
 		display: flex;
 		flex-flow: row wrap;
@@ -33,5 +29,11 @@
 
 	.commentText {
 		width: 85%;
+	}
+}
+
+@media (max-width: 768px) {
+	.blogComments {
+		width: 90%;
 	}
 }

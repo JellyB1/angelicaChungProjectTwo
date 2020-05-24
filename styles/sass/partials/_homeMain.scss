@@ -234,6 +234,31 @@
 			}
 		}
 	}
+
+	.events {
+		flex-direction: column;
+
+		.eventImageContainer,
+		.eventText {
+			width: 100%;
+		}
+
+		.eventImageContainer {
+			margin: auto;
+
+			max-width: 550px;
+
+			img {
+				box-shadow: none;
+			}
+		}
+
+		.eventText {
+			margin-top: 5%;
+
+			text-align: center;
+		}
+	}
 }
 
 @media (max-width: 600px) {
