@@ -312,7 +312,7 @@ button {
   font-size: 2.5rem;
   border: 1px solid #044779;
   line-height: 3rem;
-  padding: 5px 15px;
+  padding: 15px 15px;
   text-align: center;
   -webkit-transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
@@ -761,6 +761,10 @@ header {
             align-items: center;
     text-align: center;
     margin: 5% auto;
+  }
+  .secondSection .ourPrograms .nlText p,
+  .secondSection .newLocations .nlText p {
+    text-align: center;
   }
   .secondSection .ourPrograms .opImageContainer,
   .secondSection .ourPrograms .nlImageContainer,
