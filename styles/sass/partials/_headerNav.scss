@@ -4,7 +4,7 @@
 	width: 100%;
 
 	.hamburgMenu {
-		@include fontSize(12);
+		@include fontSize(25);
 
 		display: none;
 
@@ -53,7 +53,6 @@
 			position: fixed;
 			z-index: 10;
 			right: -30%;
-			// right: 0;
 			top: 0;
 
 			padding-top: calc(30px + 3% - 5%);
@@ -75,9 +74,6 @@
 			}
 
 			a {
-				@include fontSize(15);
-				line-height: 2rem;
-
 				display: inline-block;
 
 				padding: 10% 5%;

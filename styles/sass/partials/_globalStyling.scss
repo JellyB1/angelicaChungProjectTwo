@@ -1,7 +1,10 @@
 // General body styling
+html {
+	font-size: 10px;
+}
+
 body {
 	background-color: $mainColor;
-	font-size: 10px;
 }
 
 .wrapper {
@@ -14,7 +17,7 @@ body {
 // Hx
 h1 {
 	@include primaryFontText();
-	@include fontSize(70);
+	@include fontSize(145);
 
 	margin-top: 15%;
 
@@ -25,29 +28,28 @@ h1 {
 	}
 
 	@media (max-width: 600px) {
-		@include fontSize(50);
+		@include fontSize(90);
 	}
 }
 
 h2 {
 	@include primaryFontText();
-	@include fontSize(25);
+	@include fontSize(60);
 }
 
 h3 {
 	@include primaryFontText();
-	@include fontSize(12);
+	@include fontSize(45);
 }
 
 h4 {
 	@include secondaryFontTextBold();
-	@include fontSize(10);
+	@include fontSize(30);
 }
 
 // Other text elements
 
 a,
-// label[for="hamburgMenu"],
 .hamburgMenu {
 	padding: 20px;
 
@@ -61,11 +63,11 @@ a,
 }
 
 button {
-	@include fontSize(13);
+	@include fontSize(25);
 
 	border: 1px solid $secondaryColor;
 
-	line-height: 1.8rem;
+	line-height: 3rem;
 
 	padding: 5px 15px;
 
@@ -96,11 +98,11 @@ li {
 	list-style: none;
 }
 
+a,
 li,
 p {
-	@include fontSize(9);
-
-	line-height: 1.2rem;
+	@include fontSize(25);
+	line-height: 3rem;
 }
 
 // Global colors

@@ -1,12 +1,10 @@
 .contactMain {
-	@include fontSize(8);
-
 	display: flex;
 	flex-flow: row-wrap;
 
 	nav,
 	address {
-		margin: 8% 5%;
+		margin: 8% 5% 10%;
 
 		width: 90%;
 	}
@@ -28,7 +26,9 @@
 		justify-content: space-between;
 
 		a {
-			@include fontSize(15);
+			@include fontSize(30);
+
+			padding-left: 0px;
 		}
 	}
 
@@ -51,9 +51,17 @@
 		aside {
 			order: 0;
 
-			width: 90%;
+			width: 100%;
 
 			text-align: center;
+		}
+
+		ul {
+			a {
+				justify-content: space-between;
+
+				padding: 0;
+			}
 		}
 
 		form {
